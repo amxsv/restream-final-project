@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use SCSS for stylesheets
@@ -22,6 +21,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'pg'
+gem 'rubocop', require: false
 gem 'coveralls', require: false
 
 # Use ActiveModel has_secure_password
@@ -46,4 +46,4 @@ group :development do
   gem 'spring'
 end
 
-ruby "2.3.0"
+ruby '2.3.0'
