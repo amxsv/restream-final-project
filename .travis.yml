@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+  - 2.3.0
+before_install: gem install bundler -v 1.10.5
+before_script:
+  - psql -c 'create database taskmanager_test_db;' -U postgres
+env:
+  - TESTFOLDER=./
+script:
+  - bundle exec rake -t
+services:
+  - postgresql
+notifications:
+  slack: restream-study:xsCUPAJxhJBe0yBGEyu1RWHt
