@@ -57,6 +57,8 @@ Rails.application.routes.draw do
   scope :module => 'web' do
     namespace :admin do
       root :to => 'default#index'
+      resources :users
+      resources :tasks
     end
   end
 end
