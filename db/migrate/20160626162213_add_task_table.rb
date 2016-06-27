@@ -6,6 +6,8 @@ class AddTaskTable < ActiveRecord::Migration
       t.timestamps null: false
       t.datetime :due_date, null: false
       t.string :state
+      t.integer :author_id
+      t.integer :assigned_user_id
     end
   end
 end
