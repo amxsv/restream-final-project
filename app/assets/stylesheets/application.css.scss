@@ -10,6 +10,7 @@
 
 // Bootstrap body padding for fixed navbar
 body { padding-top: 60px; }
+.register,.login { padding-left: 120px }
 
 // And finally bootswatch style itself
 @import "bootswatch/cerulean/bootswatch";

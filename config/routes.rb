@@ -48,15 +48,22 @@ Rails.application.routes.draw do
   #   resources :photos, concerns: :toggleable
 
   # Example resource route within a namespace:
-  #   namespace :default do
-  #     # Directs /default/products/* to Admin::ProductsController
-  #     # (app/controllers/default/products_controller.rb)
+  #   namespace :users do
+  #     # Directs /users/products/* to Admin::ProductsController
+  #     # (app/controllers/users/products_controller.rb)
   #     resources :products
   #   end
 
   scope :module => 'web' do
+
+    root :to => 'users#index'
+
+    get 'index', to: 'users#index'
+    post 'login', to: 'users#login'
+
+    resources :users, only: [:show]
+
     namespace :admin do
-      root :to => 'default#index'
       resources :users
       resources :tasks
     end
