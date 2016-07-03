@@ -8,7 +8,7 @@ before_script:
 env:
   - TESTFOLDER=./
 script:
-  - bundle exec rake -t
+  - bundle exec rake test
   - bundle exec rubocop test
 services:
   - postgresql
