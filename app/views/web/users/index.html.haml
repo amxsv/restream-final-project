@@ -1,9 +1,11 @@
-.login
-  %h1 Авторизация
+%h1 Вы авторизованы
 
-  .row
-    .col-lg-6
-      = simple_form_for '', wrapper: :bootstrap, url: '/login', method: 'post' do |f|
-        = f.input :email
-        = f.input :password
-        = f.button :submit
+- if @user.confirmed?
+  %p
+    Пользователь подтвержден
+- else
+  %p
+    Пользователь не подтвержден
+
+%p
+  = link_to 'Exit', logout_path

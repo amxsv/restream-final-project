@@ -1,0 +1,12 @@
+.login
+  %h1 Авторизация
+
+  .row
+    .col-lg-6
+      = simple_form_for '', wrapper: :bootstrap, url: login_url, method: 'post' do |f|
+        = f.input :email
+        = f.input :password
+
+        %p= link_to 'Register', register_path
+
+        = f.button :submit

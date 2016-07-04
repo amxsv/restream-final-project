@@ -1,16 +1,8 @@
 class Web::UsersController < Web::ApplicationController
-  def index
-    @user = User.new
-  end
+  skip_before_action :require_login, only: [:new, :create, :confirm, :error]
 
-  def login
-    @user = User.authenticate(params[:email], params[:password])
-    if @user
-      sign_in(@user)
-      redirect_to '/users/show'
-    else
-      render 'index'
-    end
+  def index
+    @user = current_user
   end
 
   def new
@@ -19,26 +11,32 @@ class Web::UsersController < Web::ApplicationController
 
   def create
     @user = User.new(user_params)
-
     if @user.save
       sign_in(@user)
-      redirect_to '/users/show'
+
+      @user.send_confirmation_token
+      redirect_to root_path
     else
       render 'new'
     end
   end
 
-  def show
-    @user = User.find(session[:user_id])
+  def confirm
+    user = User.find_by_confirmation_token(params[:token])
+
+    if user && user.confirm
+      user.update confirmation_token: nil
+      sign_in(user)
+      redirect_to root_path
+    else
+      @error = 'User not found'
+      render 'error'
+    end
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password, :encrypted_password)
-  end
-
-  def sign_in(user)
-    session[:user_id] = user.id
+    params.require(:user).permit(:first_name, :last_name, :email, :password)
   end
 end

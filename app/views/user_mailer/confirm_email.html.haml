@@ -1,0 +1,14 @@
+%p
+  Welcome to localhost:3000, #{@user.first_name}
+
+%p
+  You have successfully signed up to localhost:3000,
+  your emals is: #{@user.email}.
+
+%p
+  To login to the site, just follow this link:
+  = link_to confirm_url(token: @user.confirmation_token.to_s),
+            confirm_url(token: @user.confirmation_token.to_s)
+
+%p
+  Thanks for joining and have a great day!

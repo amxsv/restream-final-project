@@ -55,11 +55,16 @@ Rails.application.routes.draw do
   #   end
 
   scope :module => 'web' do
+    root 'users#index'
 
-    root :to => 'users#index'
+    get 'login', to: 'session#new'
+    post 'login', to: 'session#create'
+    get 'logout', to: 'session#destroy'
 
-    get 'index', to: 'users#index'
-    post 'login', to: 'users#login'
+    get 'register', to: 'users#new'
+    post 'register', to: 'users#create'
+
+    get 'confirm', to: 'users#confirm'
 
     resources :users, only: [:show]
 

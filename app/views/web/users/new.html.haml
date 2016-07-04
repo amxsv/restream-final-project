@@ -9,7 +9,7 @@
             - @user.errors.full_messages.each do |msg|
               %li= msg
 
-      = simple_form_for @user, wrapper: :bootstrap do |f|
+      = simple_form_for @user, wrapper: :bootstrap, url: register_url do |f|
         = f.input :first_name
         = f.input :last_name
         = f.input :email

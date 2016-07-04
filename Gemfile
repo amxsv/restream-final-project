@@ -27,6 +27,10 @@ gem 'haml'
 gem 'bootswatch-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
+gem 'bcrypt', '~> 3.1.7'
+gem 'validates'
+gem 'state_machines-activerecord'
+gem 'factory_girl'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -40,6 +44,7 @@ gem 'simple_form'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'factory_girl_sequences'
 end
 
 group :development do
