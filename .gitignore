@@ -22,4 +22,5 @@
 /public/assets
 
 config/database.yml
-config/initializers/*.local.rb
+config/application.yml
+config/local_env.yml

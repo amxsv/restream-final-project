@@ -21,7 +21,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'pg'
-gem 'rubocop', require: false
 gem 'coveralls', require: false
 gem 'haml'
 gem 'bootswatch-rails'
@@ -31,6 +30,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'validates'
 gem 'state_machines-activerecord'
 gem 'factory_girl'
+gem 'figaro'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -45,6 +45,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'factory_girl_sequences'
+  gem 'rubocop', require: false
 end
 
 group :development do
