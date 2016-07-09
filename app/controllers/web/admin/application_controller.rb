@@ -1,6 +1,8 @@
 class Web::Admin::ApplicationController < Web::ApplicationController
   include AuthManager
 
+  layout 'admin'
+
   before_action :check_admin_role
 
   def check_admin_role
