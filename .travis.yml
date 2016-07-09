@@ -4,6 +4,7 @@ rvm:
 before_install: gem install bundler -v 1.10.5
 before_script:
   - cp config/database.yml.travis config/database.yml
+  - cp config/application.yml.travis config/application.yml
   - psql -c 'create database taskmanager_test_db;' -U postgres
 env:
   - TESTFOLDER=./

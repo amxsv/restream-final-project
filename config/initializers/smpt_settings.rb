@@ -1,9 +1,8 @@
 Rails.application.configure do
-  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default_url_options = {
     host: ENV['SMPT_DEFAULT_HOST'],
-    port: ENV['SMPT_DEFAULT_POST']
+    port: ENV['SMPT_DEFAULT_PORT']
   }
   config.action_mailer.default_options = {
     from: 'restream-final-project@yandex.ru'
