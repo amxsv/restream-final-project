@@ -1,7 +1,9 @@
 require 'securerandom'
 
 class User < ActiveRecord::Base
-  enum role: { worker: 1, manager: 2 }
+  extend Enumerize
+
+  enumerize :role, in: [:worker, :manager], default: :worker
 
   has_secure_password
 

@@ -31,6 +31,7 @@ gem 'validates'
 gem 'state_machines-activerecord'
 gem 'factory_girl'
 gem 'figaro'
+gem 'enumerize'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
