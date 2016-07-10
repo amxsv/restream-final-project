@@ -32,6 +32,7 @@ gem 'state_machines-activerecord'
 gem 'factory_girl'
 gem 'figaro'
 gem 'enumerize'
+gem 'rails_bootstrap_navbar'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -1,0 +1,15 @@
+= navbar fixed: :top do
+  = navbar_header brand: 'TaskManager', brand_link: admin_path
+  = navbar_collapse do
+    = navbar_group class: 'foo', id: 'menu' do
+      = navbar_item 'Home', admin_path
+      = navbar_dropdown 'Tasks' do
+        = navbar_item 'List'
+        = navbar_item 'Create'
+      = navbar_item 'Users'
+    = navbar_group align: 'right' do
+      = navbar_text @user.first_name
+      = navbar_dropdown 'Language' do
+        = navbar_item 'En'
+        = navbar_item 'Ru'
+      = navbar_item "Log Out", '/logout'
