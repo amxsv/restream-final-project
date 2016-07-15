@@ -1,1 +1,26 @@
-%h1 default page
+%h1 Tasks
+
+= link_to 'Create', new_admin_task_path, { class: 'btn btn-default' }
+
+%table{ class: 'table content' }
+  %th id
+  %th title
+  %th description
+  %th due_date
+  %th author
+  %th assigned
+  %th status
+  %th actions
+  - @tasks.each do |task|
+    %tr
+      %td= task.id
+      %td= task.title
+      %td= task.description
+      %td= task.due_date
+      %td= task.author.full_name
+      %td= task.assigned_user.full_name
+      %td= task.state
+      %td
+        = link_to '', admin_task_path(task), { class: 'glyphicon glyphicon-share-alt' }
+        = link_to '', edit_admin_task_path(task), { class: 'glyphicon glyphicon-edit' }
+        = link_to '', admin_task_path(task), method: :delete, data: { confirm: 'Delete?' }, class: 'glyphicon glyphicon-remove'

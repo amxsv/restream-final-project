@@ -26,16 +26,17 @@ gem 'haml'
 gem 'bootswatch-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
-gem 'bcrypt', '~> 3.1.7'
 gem 'validates'
 gem 'state_machines-activerecord'
 gem 'factory_girl'
 gem 'figaro'
 gem 'enumerize'
 gem 'rails_bootstrap_navbar'
+gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
+gem 'momentjs-rails', '~> 2.9', github: 'derekprior/momentjs-rails'
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -56,6 +57,8 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'bullet', group: 'development'
 end
 
 ruby '2.3.0'

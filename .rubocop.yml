@@ -9,6 +9,7 @@ AllCops:
     - '**/*.haml'
     - 'bin/*'
     - 'db/*'
+    - 'app/inputs/*'
 
 Style/FrozenStringLiteralComment:
   Enabled: false

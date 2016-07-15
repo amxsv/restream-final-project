@@ -8,11 +8,14 @@
 // Then bootstrap itself
 @import "bootstrap";
 
-// Bootstrap body padding for fixed navbar
-body { padding-top: 60px; }
-.register,.login { padding-left: 120px }
-
 // And finally bootswatch style itself
 @import "bootswatch/cerulean/bootswatch";
 
 // Whatever application styles you have go last
+@import "bootstrap-datetimepicker.min";
+
+// Bootstrap body padding for fixed navbar
+body { padding-top: 60px; }
+.main { padding: 0 60px; }
+#flash_messages { width: 50%; }
+.table.content { margin-top: 20px; }
