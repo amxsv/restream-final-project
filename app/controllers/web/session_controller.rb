@@ -11,6 +11,7 @@ class Web::SessionController < Web::ApplicationController
       sign_in(user)
       redirect_to root_path
     else
+      flash[:warning] = 'Not authenticate'
       redirect_to login_path
     end
   end

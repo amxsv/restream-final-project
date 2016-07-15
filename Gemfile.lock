@@ -1,3 +1,19 @@
+GIT
+  remote: git://github.com/derekprior/momentjs-rails.git
+  revision: 41e30d424e9a56ea4b310087615e1fdc94d87810
+  specs:
+    momentjs-rails (2.11.1)
+      railties (>= 3.1)
+
+GIT
+  remote: git://github.com/zpaulovics/datetimepicker-rails.git
+  revision: 36d21cec5da7f5b214925804f60e63c61c747023
+  branch: master
+  submodules: true
+  specs:
+    datetimepicker-rails (4.7.16)
+      momentjs-rails (>= 2.9.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -51,6 +67,9 @@ GEM
     bootswatch-rails (3.3.5)
       railties (>= 3.1)
     builder (3.2.2)
+    bullet (5.1.1)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.10.0)
     byebug (9.0.5)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
@@ -198,6 +217,7 @@ GEM
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.0.5)
+    uniform_notifier (1.10.0)
     validates (1.0.0)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -214,9 +234,11 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootstrap-sass (~> 3.3.6)
   bootswatch-rails
+  bullet
   byebug
   coffee-rails (~> 4.1.0)
   coveralls
+  datetimepicker-rails!
   enumerize
   factory_girl
   factory_girl_sequences
@@ -224,6 +246,7 @@ DEPENDENCIES
   haml
   jbuilder (~> 2.0)
   jquery-rails
+  momentjs-rails (~> 2.9)!
   pg
   rails (= 4.2.6)
   rails_bootstrap_navbar

@@ -24,6 +24,7 @@ module TaskManager
     config.active_record.raise_in_transactional_callbacks = true
 
     config.autoload_paths += [Rails.root.join('app', 'validators').to_s]
+    config.autoload_paths += Dir["#{config.root}/lib/**/"]
 
     config.before_configuration do
       env_file = File.join(Rails.root, 'config', 'local_env.yml')

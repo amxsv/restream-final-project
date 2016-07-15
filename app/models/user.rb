@@ -3,7 +3,8 @@ require 'securerandom'
 class User < ActiveRecord::Base
   extend Enumerize
 
-  enumerize :role, in: [:worker, :manager], default: :worker
+  enumerize :role, in: [:worker, :manager], default: :worker, scope: true
+  has_many :tasks
 
   has_secure_password
 
@@ -22,5 +23,9 @@ class User < ActiveRecord::Base
 
     update confirmation_token: SecureRandom.hex
     UserMailer.confirm_email(self).deliver_later
+  end
+
+  def full_name
+    "#{first_name} #{last_name}"
   end
 end

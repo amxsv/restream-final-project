@@ -1,0 +1,11 @@
+= simple_form_for [:admin, @task] do |f|
+  - if @task.errors.any?
+    %ul{ class: 'danger' }
+      - @task.errors.full_messages.each do |msg|
+        %li= msg
+
+  = f.input :title
+  = f.input :description, as: :text, input_html: { rows: 7 }
+  = f.input :due_date, as: :datetime_picker
+  = f.association :assigned_user, label_method: :full_name, collection: User.with_role(:worker), include_blank: 'select', selected: @task.assigned_user_id
+  = f.button :submit
