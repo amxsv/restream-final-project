@@ -1,0 +1,8 @@
+ru:
+  simple_form:
+    labels:
+      defaults:
+        email: Email
+        password: Пароль
+        first_name: Имя
+        last_name: Фамилия

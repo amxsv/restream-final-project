@@ -1,0 +1,9 @@
+en:
+  flash:
+    web:
+      session:
+        create:
+          warning: 'Wrong email or password'
+      users:
+        create:
+          success: 'You have successfully signed up. You will be sent a link to confirm'

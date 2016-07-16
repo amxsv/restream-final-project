@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   validates_presence_of :first_name
   validates_presence_of :last_name
-  validates :email, presence: true, uniqueness: true, email: true
+  validates :email, uniqueness: true, email: true
 
   state_machine :state, initial: :unconfirmed do
     event :confirm do

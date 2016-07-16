@@ -12,6 +12,6 @@
 %p
   = @task.assigned_user.full_name
 
-= link_to 'Change', edit_admin_task_path(@task)
+= link_to t('helpers.submit.change'), edit_admin_task_path(@task)
 |
-= link_to 'Back', admin_tasks_path
+= link_to t('helpers.submit.back'), admin_tasks_path

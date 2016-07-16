@@ -1,23 +1,29 @@
 Rails.application.routes.draw do
-  scope :module => 'web' do
-    root 'users#index'
+  root_path = 'users#index'
 
-    get 'login', to: 'session#new'
-    post 'login', to: 'session#create'
-    get 'logout', to: 'session#destroy'
+  scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
+    scope :module => 'web' do
+      get ':locale', to: root_path
 
-    get 'register', to: 'users#new'
-    post 'register', to: 'users#create'
+      root root_path
 
-    get 'confirm', to: 'users#confirm'
+      get 'login', to: 'session#new'
+      post 'login', to: 'session#create'
+      get 'logout', to: 'session#destroy'
 
-    resources :users, only: [:show]
+      get 'register', to: 'users#new'
+      post 'register', to: 'users#create'
 
-    namespace :admin do
-      get '/', to: 'tasks#index'
+      get 'confirm', to: 'users#confirm'
 
-      resources :users
-      resources :tasks
+      resources :users, only: [:show]
+
+      namespace :admin do
+        get '/', to: 'tasks#index'
+
+        resources :users
+        resources :tasks
+      end
     end
   end
 end

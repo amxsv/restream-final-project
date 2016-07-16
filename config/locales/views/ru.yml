@@ -1,0 +1,30 @@
+ru:
+  web:
+    session:
+      new:
+        title: Авторизация
+        register: Регистрация
+
+    users:
+      new:
+        title: Регистрация
+
+    admin:
+      tasks:
+        form:
+          select: Выбрать
+        index:
+          page_title: Список задач
+          id: Id
+          title: Название
+          description: Описание
+          due_date: Дата окончания
+          author: Автор
+          assigned: Исполнитель
+          status: Статус
+          actions: Действия
+          delete: Удалить задачу?
+        new:
+          page_title: Новая задача
+        edit:
+          page_title: Изменить задачу

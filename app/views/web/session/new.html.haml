@@ -1,4 +1,4 @@
-%h1 Авторизация
+%h1= t '.title'
 
 .row
   .col-lg-6
@@ -6,6 +6,6 @@
       = f.input :email
       = f.input :password
 
-      %p= link_to 'Register', register_path
+      %p= link_to t('.register'), register_path
 
-      = f.button :submit
+      = f.button :submit, t('helpers.submit.login')

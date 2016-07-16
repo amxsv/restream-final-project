@@ -104,6 +104,8 @@ GEM
     haml (4.0.7)
       tilt
     i18n (0.7.0)
+    i18n-debug (1.1.0)
+      i18n (< 1)
     jbuilder (2.5.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -244,6 +246,7 @@ DEPENDENCIES
   factory_girl_sequences
   figaro
   haml
+  i18n-debug
   jbuilder (~> 2.0)
   jquery-rails
   momentjs-rails (~> 2.9)!

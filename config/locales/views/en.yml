@@ -1,0 +1,30 @@
+en:
+  web:
+    session:
+      new:
+        title: Authorization
+        register: Sign Up
+
+    users:
+      new:
+        title: Sign Up
+
+    admin:
+      tasks:
+        form:
+          select: Select
+        index:
+          page_title: Tasks
+          id: Id
+          title: Title
+          description: Description
+          due_date: Due date
+          author: Author
+          assigned: Assigned
+          status: Status
+          actions: Actions
+          delete: Delete task?
+        new:
+          page_title: New task
+        edit:
+          page_title: Change task

@@ -1,5 +1,6 @@
 class Web::SessionController < Web::ApplicationController
   skip_before_action :require_login, only: [:new, :create]
+  skip_before_action :check_manager_auth, only: [:destroy]
 
   def new
   end
@@ -11,7 +12,7 @@ class Web::SessionController < Web::ApplicationController
       sign_in(user)
       redirect_to root_path
     else
-      flash[:warning] = 'Not authenticate'
+      f(:warning)
       redirect_to login_path
     end
   end

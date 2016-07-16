@@ -1,0 +1,26 @@
+ru:
+  activerecord:
+    attributes:
+      user:
+        password: Пароль
+        first_name: Имя
+        last_name: Фамилия
+        email: ''
+      task:
+        title: Название
+        description: Описание
+        due_date: Срок выполнения
+        assigned_user: Исполнитель
+
+    models:
+      user: Пользователь
+
+    errors:
+      messages:
+        blank: 'не может быть пустым'
+      models:
+        user:
+          attributes:
+            email:
+              email: 'Введите корректный email'
+              taken: 'Данный email уже существует'

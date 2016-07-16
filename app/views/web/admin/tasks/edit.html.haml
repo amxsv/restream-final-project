@@ -1,7 +1,7 @@
-%h1 Change Task
+%h1= t '.page_title'
 
 .row
   .col-lg-6
     = render 'form'
 
-= link_to 'Back', admin_tasks_path
+= link_to t('helpers.submit.back'), admin_tasks_path

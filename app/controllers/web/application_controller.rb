@@ -1,10 +1,11 @@
 class Web::ApplicationController < ApplicationController
   include AuthManager
   include FlashHelper
+  include NavbarHelper
 
   before_action :require_login, :check_manager_auth
 
-  helper_method :flash_messages
+  helper_method :flash_messages, :authorized?, :languages
 
   def require_login
     redirect_to login_path unless authorized?

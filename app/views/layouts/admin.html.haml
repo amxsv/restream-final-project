@@ -12,17 +12,17 @@
       = navbar_header brand: 'TaskManager', brand_link: admin_path
       = navbar_collapse do
         = navbar_group class: 'foo', id: 'menu' do
-          = navbar_item 'Home', admin_path
-          = navbar_dropdown 'Tasks' do
-            = navbar_item 'List', admin_tasks_path
-            = navbar_item 'Create', new_admin_task_path
-          = navbar_item 'Users'
+          = navbar_item t('navbar_top.home'), admin_path
+          = navbar_dropdown t('navbar_top.tasks.title') do
+            = navbar_item t('navbar_top.tasks.list'), admin_tasks_path
+            = navbar_item t('navbar_top.tasks.create'), new_admin_task_path
+          = navbar_item t('navbar_top.users')
         = navbar_group align: 'right' do
           = navbar_text @current_user.first_name
-          = navbar_dropdown 'Language' do
-            = navbar_item 'En'
-            = navbar_item 'Ru'
-          = navbar_item "Log Out", '/logout'
+          = navbar_dropdown t('navbar_top.language') do
+            - languages.each do |key, locale|
+              = navbar_item key, locale
+          = navbar_item t('navbar_top.logout'), logout_path
 
     #flash_messages
       = flash_messages

@@ -1,0 +1,10 @@
+ru:
+  navbar_top:
+    logout: Выход
+    home: Главная
+    language: Язык
+    tasks:
+      title: Задачи
+      list: Список
+      create: Создать
+    users: Пользователи
