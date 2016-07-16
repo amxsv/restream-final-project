@@ -1,5 +1,7 @@
 module NavbarHelper
   def languages
+    return [] if request.path.empty?
+
     path_parts = request.path[1..request.path.length].split('/')
     path_parts.shift if I18n.available_locales.include? path_parts.first.to_sym
 

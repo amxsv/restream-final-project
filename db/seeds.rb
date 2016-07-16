@@ -25,3 +25,30 @@ end
     state: 'confirmed'
   )
 end
+
+manager = User.create(
+    first_name: "ManagerFirstName",
+    last_name: "ManagerLastName",
+    email: "manageremail@email.com",
+    role: 'manager',
+    password: '123123',
+    state: 'confirmed'
+)
+
+worker = User.create(
+    first_name: "WorkerFirstName",
+    last_name: "WorkerLastName",
+    email: "workeremail@email.com",
+    password: '123123',
+    state: 'confirmed'
+)
+
+55.times do |n|
+  Task.create(
+    title: "Task#{n}",
+    description: "Description#{n}",
+    due_date: '2016-07-25 12:00',
+    assigned_user_id: worker.id,
+    author_id: manager.id
+  )
+end

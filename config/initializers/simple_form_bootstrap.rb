@@ -144,6 +144,13 @@ SimpleForm.setup do |config|
     end
   end
 
+  config.wrappers :pager, :tag => 'div', :class => 'form-group', :error_class => 'error' do |b|
+    b.use :html5
+    b.wrapper :tag => 'div', :class => 'col-xs-1' do |ba|
+      ba.use :input, class: 'form-control'
+    end
+  end
+
   # Wrappers for forms and inputs using the Bootstrap toolkit.
   # Check the Bootstrap docs (http://getbootstrap.com)
   # to learn about the different styles for forms and inputs,

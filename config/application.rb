@@ -40,5 +40,7 @@ module TaskManager
         ENV[key.to_s] = value
       end if File.exists?(env_file)
     end
+
+    config.x.pager.values = [5, 10, 25, 50]
   end
 end

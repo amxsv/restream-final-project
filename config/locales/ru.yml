@@ -8,3 +8,10 @@ ru:
       list: Список
       create: Создать
     users: Пользователи
+
+  views:
+    pagination:
+      next: Следующая
+      last: В конец
+      first: В начало
+      previous: Предыдущая

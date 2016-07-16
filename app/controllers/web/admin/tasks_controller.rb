@@ -1,6 +1,10 @@
 class Web::Admin::TasksController < Web::Admin::ApplicationController
   def index
-    @tasks = Task.includes(:author, :assigned_user).all
+    @per_page = params[:per_page] || Kaminari.config.default_per_page
+    @tasks = Task.includes(:author, :assigned_user)
+                 .all
+                 .page(params[:page])
+                 .per(@per_page)
   end
 
   def show
