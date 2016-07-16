@@ -1,6 +1,6 @@
 class Web::Admin::TasksController < Web::Admin::ApplicationController
   def index
-    @tasks = Task.all
+    @tasks = Task.includes(:author, :assigned_user).all
   end
 
   def show

@@ -23,4 +23,7 @@
       %td
         = link_to '', admin_task_path(task), { class: 'glyphicon glyphicon-share-alt' }
         = link_to '', edit_admin_task_path(task), { class: 'glyphicon glyphicon-edit' }
-        = link_to '', admin_task_path(task), method: :delete, data: { confirm: 'Delete?' }, class: 'glyphicon glyphicon-remove'
+        = link_to '',
+          admin_task_path(task),
+          method: :delete,
+          data: { confirm: 'Delete?' }, class: 'glyphicon glyphicon-remove'
