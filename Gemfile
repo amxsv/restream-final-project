@@ -36,6 +36,7 @@ gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: '
 gem 'momentjs-rails', '~> 2.9', github: 'derekprior/momentjs-rails'
 gem 'kaminari'
 gem 'kaminari-bootstrap', '~> 3.0.1'
+gem 'draper'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
