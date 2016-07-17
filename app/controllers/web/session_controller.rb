@@ -13,7 +13,6 @@ class Web::SessionController < Web::ApplicationController
       redirect_to root_path
     else
       f(:warning)
-      #flash[:warning] = t '.warning', scope: [:flash]
       redirect_to login_path
     end
   end

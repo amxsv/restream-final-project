@@ -7,7 +7,7 @@ module NavbarHelper
     path = path_parts.join('/')
 
     I18n.available_locales.each do |locale|
-      locale_path = (I18n.default_locale == locale) ? '/' + path: '/' + locale.to_s + '/' + path
+      locale_path = (I18n.default_locale == locale) ? '/' + path : '/' + locale.to_s + '/' + path
       languages[locale.to_s.capitalize] = locale_path
     end
 
