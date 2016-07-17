@@ -17,8 +17,8 @@
           - if authorized?
             = navbar_text @current_user.first_name
           = navbar_dropdown t('navbar_top.language') do
-            - I18n.available_locales.each do |locale|
-              = navbar_item locale.to_s.capitalize, '/' + locale.to_s + request.path
+            - languages.each do |key, locale|
+              = navbar_item key, locale
           - if authorized?
             = navbar_item t('navbar_top.logout'), logout_path
 
