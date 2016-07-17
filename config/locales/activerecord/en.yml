@@ -1,0 +1,26 @@
+en:
+  activerecord:
+    attributes:
+      user:
+        password: Password
+        first_name: First name
+        last_name: Last name
+        email: ''
+      task:
+        title: Title
+        description: Description
+        due_date: Due date
+        assigned_user: Assigned user
+
+    models:
+      user: User
+
+    errors:
+      messages:
+        blank: "can't be blank"
+      models:
+        user:
+          attributes:
+            email:
+              email: 'Please enter a valid email'
+              taken: 'This email already exists'

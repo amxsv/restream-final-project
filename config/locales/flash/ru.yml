@@ -1,0 +1,9 @@
+ru:
+  flash:
+    web:
+      session:
+        create:
+          warning: 'Не верный email или пароль'
+      user:
+        create:
+          success: 'Вы успешно зарегистрировались. Вам отправлена ссылка на подтверждение'

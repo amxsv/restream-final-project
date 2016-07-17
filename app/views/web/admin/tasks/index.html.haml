@@ -1,16 +1,16 @@
-%h1 Tasks
+%h1= t '.page_title'
 
-= link_to 'Create', new_admin_task_path, { class: 'btn btn-default' }
+= link_to t('helpers.submit.create'), new_admin_task_path, { class: 'btn btn-default' }
 
 %table{ class: 'table content' }
-  %th id
-  %th title
-  %th description
-  %th due_date
-  %th author
-  %th assigned
-  %th status
-  %th actions
+  %th= t '.id'
+  %th= t '.title'
+  %th= t '.description'
+  %th= t '.due_date'
+  %th= t '.author'
+  %th= t '.assigned'
+  %th= t '.status'
+  %th= t '.actions'
   - @tasks.each do |task|
     %tr
       %td= task.id
@@ -26,4 +26,4 @@
         = link_to '',
           admin_task_path(task),
           method: :delete,
-          data: { confirm: 'Delete?' }, class: 'glyphicon glyphicon-remove'
+          data: { confirm: t('.delete') }, class: 'glyphicon glyphicon-remove'

@@ -49,6 +49,7 @@ group :development, :test do
   gem 'byebug'
   gem 'factory_girl_sequences'
   gem 'rubocop', require: false
+  gem 'i18n-debug'
 end
 
 group :development do

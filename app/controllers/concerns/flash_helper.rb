@@ -2,6 +2,10 @@ module FlashHelper
   include ActionView::Helpers::TagHelper
   include ActionView::Context
 
+  def f(key)
+    flash[key] = t '.' + key.to_s, scope: [:flash]
+  end
+
   def flash_messages
     content_tag :div, class: 'flash-messages' do
       flash.map do |key, value|

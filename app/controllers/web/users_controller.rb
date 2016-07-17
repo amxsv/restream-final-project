@@ -13,6 +13,7 @@ class Web::UsersController < Web::ApplicationController
     @user = User.new(user_params)
     if @user.save
       sign_in(@user)
+      f(:success)
 
       @user.send_confirmation_token
       redirect_to root_path
