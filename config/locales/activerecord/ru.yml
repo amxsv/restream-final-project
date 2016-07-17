@@ -24,3 +24,14 @@ ru:
             email:
               email: 'Введите корректный email'
               taken: 'Данный email уже существует'
+
+    state_machines:
+      task:
+        states:
+          new: Новая
+          assigned: Назначена
+          doing: Выполняется
+          testing: Тестируется
+          accepted: Принята
+          rejected: Отклонена
+          archived: В архиве

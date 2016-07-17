@@ -19,7 +19,7 @@
       %td= task.due_date
       %td= task.author.full_name
       %td= task.assigned_user.full_name
-      %td= task.state
+      %td= task.human_state_name
       %td
         = link_to '', admin_task_path(task), { class: 'glyphicon glyphicon-share-alt' }
         = link_to '', edit_admin_task_path(task), { class: 'glyphicon glyphicon-edit' }
