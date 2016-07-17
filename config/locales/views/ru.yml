@@ -28,3 +28,8 @@ ru:
           page_title: Новая задача
         edit:
           page_title: Изменить задачу
+
+      users:
+        index:
+          page_title: Пользователи
+          tasks_count: Количество задач

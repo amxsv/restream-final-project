@@ -1,0 +1,6 @@
+= simple_form_for admin_path, wrapper: :pager, method: 'get', enforce_utf8: false do |f|
+  = f.input :per_page,
+   collection: collection,
+   label: false,
+   selected: @per_page,
+   input_html: { onchange: 'this.form.submit();', name: :per_page }

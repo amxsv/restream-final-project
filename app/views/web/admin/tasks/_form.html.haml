@@ -10,7 +10,7 @@
   = f.input :due_date, as: :datetime_picker
   = f.association :assigned_user,
    label_method: :full_name,
-   collection: User.with_role(:worker),
+   collection: User.workers,
    include_blank: t('.select'),
    selected: @task.assigned_user_id
 

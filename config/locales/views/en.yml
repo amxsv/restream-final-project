@@ -28,3 +28,8 @@ en:
           page_title: New task
         edit:
           page_title: Change task
+
+      users:
+        index:
+          page_title: Users
+          tasks_count: Tasks count
