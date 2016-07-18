@@ -1,0 +1,20 @@
+%h1= t '.page_title'
+
+%table{ class: 'table content' }
+  %th Id
+  %th= User.human_attribute_name(:first_name)
+  %th= User.human_attribute_name(:last_name)
+  %th= User.human_attribute_name(:email)
+  %th= User.human_attribute_name(:state)
+  %th= t '.tasks_count'
+
+  - @users.each do |user|
+    %tr
+      %td= user.id
+      %td= user.first_name
+      %td= user.last_name
+      %td= user.email
+      %td= user.state
+      %td= user.tasks_count
+
+= render 'pagination'

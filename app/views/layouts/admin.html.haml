@@ -16,7 +16,7 @@
           = navbar_dropdown t('navbar_top.tasks.title') do
             = navbar_item t('navbar_top.tasks.list'), admin_tasks_path
             = navbar_item t('navbar_top.tasks.create'), new_admin_task_path
-          = navbar_item t('navbar_top.users')
+          = navbar_item t('navbar_top.users'), admin_users_path
         = navbar_group align: 'right' do
           = navbar_text @current_user.first_name
           = navbar_dropdown t('navbar_top.language') do

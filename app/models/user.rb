@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
   validates_presence_of :last_name
   validates :email, uniqueness: true, email: true
 
+  scope :workers, -> { with_role(:worker) }
+
   state_machine :state, initial: :unconfirmed do
     event :confirm do
       transition unconfirmed: :confirmed
@@ -27,5 +29,9 @@ class User < ActiveRecord::Base
 
   def full_name
     "#{first_name} #{last_name}"
+  end
+
+  def tasks_count
+    Task.where(assigned_user: id).count
   end
 end

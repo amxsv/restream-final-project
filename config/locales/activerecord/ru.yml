@@ -5,7 +5,8 @@ ru:
         password: Пароль
         first_name: Имя
         last_name: Фамилия
-        email: ''
+        email: Email
+        state: Статус
       task:
         title: Название
         description: Описание
@@ -35,3 +36,8 @@ ru:
           accepted: Принята
           rejected: Отклонена
           archived: В архиве
+
+      user:
+        states:
+          unconfirmed: Не подтвержден
+          confirmed: Подтвержден

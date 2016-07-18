@@ -8,3 +8,7 @@ en:
       list: List
       create: Create
     users: Users
+
+  views:
+    pagination:
+      truncate: "&hellip;"
