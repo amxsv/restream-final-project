@@ -5,6 +5,7 @@
   %th= User.human_attribute_name(:first_name)
   %th= User.human_attribute_name(:last_name)
   %th= User.human_attribute_name(:email)
+  %th= User.human_attribute_name(:role)
   %th= User.human_attribute_name(:state)
   %th= t '.tasks_count'
 
@@ -14,7 +15,8 @@
       %td= user.first_name
       %td= user.last_name
       %td= user.email
-      %td= user.state
+      %td= user.role
+      %td= user.human_state_name
       %td= @tasks_count[user.id]
 
 = render 'pagination'

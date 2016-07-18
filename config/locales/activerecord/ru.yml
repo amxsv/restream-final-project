@@ -7,6 +7,7 @@ ru:
         last_name: Фамилия
         email: Email
         state: Статус
+        role: Роль
       task:
         title: Название
         description: Описание
