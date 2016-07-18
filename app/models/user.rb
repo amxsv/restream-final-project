@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   extend Enumerize
 
   enumerize :role, in: [:worker, :manager], default: :worker, scope: true
-  has_many :tasks
+  has_many :tasks, foreign_key: 'assigned_user_id'
 
   has_secure_password
 
@@ -33,5 +33,18 @@ class User < ActiveRecord::Base
 
   def tasks_count
     Task.where(assigned_user: id).count
+  end
+
+  def self.tasks_count
+    users = select('users.id, count(*) as count')
+            .joins(:tasks)
+            .group(:id)
+            .all
+
+    result = []
+    users.each do |u|
+      result[u.id] = u.count
+    end
+    result
   end
 end

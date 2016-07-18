@@ -15,6 +15,6 @@
       %td= user.last_name
       %td= user.email
       %td= user.state
-      %td= user.tasks_count
+      %td= @tasks_count[user.id]
 
 = render 'pagination'
