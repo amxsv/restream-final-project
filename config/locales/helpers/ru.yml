@@ -6,5 +6,6 @@ ru:
       back: Назад
       change: Изменить
       update: Обновить
+      filter: Фильтр
       user:
         create: Зарегистрироваться

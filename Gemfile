@@ -39,6 +39,7 @@ gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'draper'
 gem 'authority'
 gem 'rails_12factor'
+gem 'ransack'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'

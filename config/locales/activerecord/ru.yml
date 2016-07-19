@@ -8,11 +8,13 @@ ru:
         email: Email
         state: Статус
         role: Роль
+        fio: ФИО
       task:
         title: Название
         description: Описание
         due_date: Срок выполнения
         assigned_user: Исполнитель
+        state: Статус
 
     models:
       user: Пользователь

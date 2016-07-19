@@ -1,0 +1,11 @@
+= simple_form_for @q,
+  url: admin_tasks_path,
+  method: :get,
+  enforce_utf8: false,
+  defaults: { required: false } do |f|
+  = f.input :state_eq, collection: @states, label: Task.human_attribute_name(:state)
+
+  = f.input :assigned_user_last_name_or_assigned_user_first_name_cont,
+    label: User.human_attribute_name('fio')
+
+  = f.submit t 'helpers.submit.filter'
