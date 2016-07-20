@@ -1,8 +1,11 @@
 class Web::Admin::TasksController < Web::Admin::ApplicationController
   def index
+    @states = TaskHelper.state_labels
     @per_page = params[:per_page] || Kaminari.config.default_per_page
+
+    @q = Task.ransack(params[:q])
     @tasks = TaskDecorator.decorate_collection(
-      Task.includes(:author, :assigned_user)
+      @q.result.includes(:author, :assigned_user)
           .order(:id)
           .all
           .page(params[:page])

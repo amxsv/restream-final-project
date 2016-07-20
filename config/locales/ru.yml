@@ -16,3 +16,9 @@ ru:
       first: В начало
       previous: Предыдущая
       truncate: "&hellip;"
+
+  enumerize:
+    user:
+      role:
+        worker: Воркер
+        manager: Менеджер

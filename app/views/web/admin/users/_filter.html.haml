@@ -1,0 +1,10 @@
+= simple_form_for @q,
+  url: admin_users_path,
+  method: :get,
+  enforce_utf8: false,
+  defaults: { required: false } do |f|
+  = f.input :email_cont, label: User.human_attribute_name('email')
+  = f.input :first_name_cont, label: User.human_attribute_name('first_name')
+  = f.input :last_name_cont, label: User.human_attribute_name('last_name')
+  = f.input :role_eq, collection: User.role.options, label: User.human_attribute_name('role')
+  = f.submit t 'helpers.submit.filter'

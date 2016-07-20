@@ -1,7 +1,9 @@
 %h1= t '.page_title'
 
+= render 'filter'
+
 %table{ class: 'table content' }
-  %th Id
+  %th= sort_link(@q, :id)
   %th= User.human_attribute_name(:first_name)
   %th= User.human_attribute_name(:last_name)
   %th= User.human_attribute_name(:email)
@@ -15,7 +17,7 @@
       %td= user.first_name
       %td= user.last_name
       %td= user.email
-      %td= user.role
+      %td= user.role.text
       %td= user.human_state_name
       %td= @tasks_count[user.id]
 

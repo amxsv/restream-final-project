@@ -2,11 +2,13 @@
 
 = link_to t('helpers.submit.create'), new_admin_task_path, { class: 'btn btn-default' }
 
+= render 'filter'
+
 %table{ class: 'table content' }
-  %th= t '.id'
+  %th= sort_link(@q, :id)
   %th= t '.title'
   %th= t '.description'
-  %th= t '.due_date'
+  %th= sort_link(@q, :due_date)
   %th= t '.author'
   %th= t '.assigned'
   %th= t '.status'

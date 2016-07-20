@@ -6,5 +6,6 @@ en:
       back: Back
       change: Change
       update: Update
+      filter: Filter
       user:
         create: Sign Up
